@@ -15,6 +15,8 @@ Clone from git:
 
 `git clone https://github.com/c1f3r/db_stud`
 
+`cd db_stud`
+
 Install requirements:
 
 `pip install -r requirements.txt`
