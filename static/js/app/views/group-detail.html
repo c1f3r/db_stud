@@ -1,0 +1,55 @@
+<h1>{{ group.title }} with {{ group.students.length }} students <span ng-show="group.monitor">and
+    <a href="{{ group.monitor_details.api_url }}">{{ group.monitor_details.full_name }}</a> as monitor</span></h1>
+
+<div class="row" ng-show="is_authenticated">
+    <ng-form novalidate name="studForm">
+        <div class="col-md-4">
+            <div>Student's full name:
+                <input type="text" class="form-control" ng-model="newStudentName" ng-required="true"
+                       autofocus="autofocus"/>
+            </div>
+            <div>Student's ID number:
+                <input type="text" class="form-control" ng-model="newStudentId" ng-required="true"/>
+            </div>
+            <div>Student's birth date:
+                <input type="date" class="form-control" ng-model="newStudentBirthDate" ng-required="true"/>
+            </div>
+            <button type="submit" class="btn btn-success" ng-disabled="studForm.$invalid" ng-click="addStudent()">
+                Add student
+            </button>
+        </div>
+    </ng-form>
+
+    <ng-form novalidate>
+        <div class="col-md-4">
+            Change monitor:
+            <select class="form-control" ng-model="groupMonitor"
+                    ng-options="student as student.full_name for student in group.students_details | orderBy: 'full_name'">
+                <option value="">--choose monitor--</option>
+            </select>
+            <button type="submit" class="btn btn-success" ng-click="changeMonitor()">Change monitor</button>
+        </div>
+    </ng-form>
+</div>
+<h2>List of {{ group.title }} students:</h2>
+<table class="table">
+    <tr>
+        <th>#</th>
+        <th>Full name</th>
+        <th>ID number</th>
+        <th>Birth date</th>
+        <th ng-show="is_authenticated">Edit</th>
+        <th ng-show="is_authenticated">Delete</th>
+    </tr>
+    <tr ng-repeat="student in group.students_details | orderBy: 'full_name'">
+        <td>{{ $index + 1 }}</td>
+        <td><a href="{{ student.api_url }}">{{ student.full_name }}</a></td>
+        <td>{{ student.id_number }}</td>
+        <td>{{ student.birth_date }}</td>
+        <td ng-show="is_authenticated"><a class="btn btn-default" ng-href="{{ student.api_url }}"><span
+                class="glyphicon glyphicon-edit"></span></a></td>
+        <td ng-show="is_authenticated">
+            <button class="btn btn-default" ng-click="deleteStudent(student)"><span class="glyphicon glyphicon-trash"></span></button>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,47 @@
+<h1>{{ student.full_name }} details</h1>
+<div class="row"  ng-show="is_authenticated">
+    <ng-form novalidate name="studForm">
+        <div class="col-md-4">
+            <div>Student's full name:
+                <input type="text" class="form-control" ng-model="newStudentName" ng-required="true"
+                        autofocus="autofocus"/>
+            </div>
+            <div>Student's ID number:
+                <input type="text" class="form-control" ng-model="newStudentId" ng-required="true"/>
+            </div>
+            <div>Student's birth date:
+                <input type="date" class="form-control" ng-model="newStudentBirthDate" ng-required="true"/>
+            </div>
+            <div>Select group:
+                <select class="form-control" ng-model="newStudentGroup"
+                        ng-options="groupSel.url as groupSel.title for groupSel in groups | orderBy: 'title'">
+                    <option value="">--select group--</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success" ng-disabled="studForm.$invalid" ng-click="updateStudent()">
+                Change student
+            </button>
+        </div>
+    </ng-form>
+    <div class="col-md-4">
+        <alert ng-show="alerts" ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{ alert.msg }}</alert>
+    </div>
+
+</div>
+
+<table class="table">
+    <tr>
+        <th>#</th>
+        <th>Full name</th>
+        <th>ID number</th>
+        <th>Birth date</th>
+        <th>Group</th>
+    </tr>
+    <tr>
+        <td>{{ $index + 1 }}</td>
+        <td><a href="{{ student.api_url }}">{{ student.full_name }}</a></td>
+        <td>{{ student.id_number }}</td>
+        <td>{{ student.birth_date }}</td>
+        <td><a ng-href="{{ student.group_api_url }}">{{ student.group_title }}</a></td>
+    </tr>
+</table>

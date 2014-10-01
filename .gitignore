@@ -1,0 +1,3 @@
+db.sqlite3
+ex_uwsgi.ini
+uwsgi_params

@@ -1,0 +1,33 @@
+<h1>Group list</h1>
+<div class="row" ng-show="is_authenticated">
+    <ng-form name="groupForm" novalidate class="col-md-4">
+        <input type="text" class="form-control" ng-model="newGroupTitle" ng-required="true" autofocus="autofocus">
+        <button type="submit" class="btn btn-success" ng-disabled="groupForm.$invalid" ng-click="addGroup()">Add
+            group
+        </button>
+        <alert ng-show="alerts" ng-repeat="alert in alerts" type="{{ alert.type }}"
+               close="closeAlert($index)">{{ alert.msg }}</alert>
+    </ng-form>
+</div>
+<table class="table">
+    <tr>
+        <th>#</th>
+        <th>Group title</th>
+        <th>Quantity of students</th>
+        <th>Monitor</th>
+        <th ng-show="is_authenticated">Edit</th>
+        <th ng-show="is_authenticated">Delete</th>
+    </tr>
+    <tr ng-repeat="group in groups | orderBy: 'title'">
+        <td>{{ $index + 1 }}</td>
+        <td><a ng-href="{{ group.api_url }}">{{ group.title }}</a></td>
+        <td>{{ group.students.length }}</td>
+        <td><a ng-href="{{ group.monitor_details.api_url }}">{{ group.monitor_details.full_name }}</a></td>
+        <td ng-show="is_authenticated"><a class="btn btn-default" ng-href="{{ group.api_url }}"><span class="glyphicon glyphicon-edit"></span></a>
+        </td>
+        <td ng-show="is_authenticated">
+            <button class="btn btn-default" ng-click="deleteGroup(group)"><span
+                    class="glyphicon glyphicon-trash"></span></button>
+        </td>
+    </tr>
+</table>

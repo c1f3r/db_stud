@@ -1,0 +1,215 @@
+[
+
+    {
+        "fields": {
+            "monitor": null,
+            "title": "Group #3"
+        },
+        "model": "db.group",
+        "pk": 203
+    },
+    {
+        "fields": {
+            "monitor": null,
+            "title": "Group #5"
+        },
+        "model": "db.group",
+        "pk": 205
+    },
+    {
+        "fields": {
+            "monitor": null,
+            "title": "Group #6"
+        },
+        "model": "db.group",
+        "pk": 206
+    },
+    {
+        "fields": {
+            "monitor": null,
+            "title": "Group #7"
+        },
+        "model": "db.group",
+        "pk": 210
+    },
+    {
+        "fields": {
+            "monitor": null,
+            "title": "Group #8"
+        },
+        "model": "db.group",
+        "pk": 211
+    },
+    {
+        "fields": {
+            "monitor": null,
+            "title": "Group #9"
+        },
+        "model": "db.group",
+        "pk": 212
+    },
+    {
+        "fields": {
+            "monitor": null,
+            "title": "Group #10"
+        },
+        "model": "db.group",
+        "pk": 215
+    },
+    {
+        "fields": {
+            "monitor": 9,
+            "title": "Group #1"
+        },
+        "model": "db.group",
+        "pk": 222
+    },
+    {
+        "fields": {
+            "monitor": null,
+            "title": "Group #4"
+        },
+        "model": "db.group",
+        "pk": 223
+    },
+    {
+        "fields": {
+            "monitor": 12,
+            "title": "Group #2"
+        },
+        "model": "db.group",
+        "pk": 224
+    },
+    {
+        "fields": {
+            "id_number": "000001",
+            "birth_date": "2001-01-01",
+            "group": 222,
+            "full_name": "Petryk Pyatochkin"
+        },
+        "model": "db.student",
+        "pk": 9
+    },
+    {
+        "fields": {
+            "id_number": "000002",
+            "birth_date": "2000-01-02",
+            "group": 222,
+            "full_name": "Aubekir Yagopirovich"
+        },
+        "model": "db.student",
+        "pk": 10
+    },
+    {
+        "fields": {
+            "id_number": "000003",
+            "birth_date": "1998-12-30",
+            "group": 224,
+            "full_name": "Vasya Pupkin"
+        },
+        "model": "db.student",
+        "pk": 11
+    },
+    {
+        "fields": {
+            "id_number": "000004",
+            "birth_date": "1814-03-09",
+            "group": 224,
+            "full_name": "Taras Shevchenko"
+        },
+        "model": "db.student",
+        "pk": 12
+    },
+    {
+        "fields": {
+            "id_number": "000005",
+            "birth_date": "1997-01-20",
+            "group": 224,
+            "full_name": "Ivan Ivanov"
+        },
+        "model": "db.student",
+        "pk": 13
+    },
+    {
+        "fields": {
+            "action": "modified",
+            "model": "Group #2",
+            "time": "2014-10-01T11:23:37.253Z"
+        },
+        "model": "db.event",
+        "pk": 6
+    },
+    {
+        "fields": {
+            "action": "modified",
+            "model": "Group #1",
+            "time": "2014-10-01T13:43:47.422Z"
+        },
+        "model": "db.event",
+        "pk": 7
+    },
+    {
+        "fields": {
+            "action": "modified",
+            "model": "Group #10",
+            "time": "2014-10-01T13:43:53.267Z"
+        },
+        "model": "db.event",
+        "pk": 8
+    },
+    {
+        "fields": {
+            "action": "modified",
+            "model": "Group #1",
+            "time": "2014-10-01T13:44:01.782Z"
+        },
+        "model": "db.event",
+        "pk": 9
+    },
+    {
+        "fields": {
+            "action": "modified",
+            "model": "Group #2",
+            "time": "2014-10-01T13:44:55.834Z"
+        },
+        "model": "db.event",
+        "pk": 10
+    },
+    {
+        "fields": {
+            "action": "modified",
+            "model": "Vasya Pupkin",
+            "time": "2014-10-01T13:44:55.838Z"
+        },
+        "model": "db.event",
+        "pk": 11
+    },
+    {
+        "fields": {
+            "action": "modified",
+            "model": "Ivan Ivanov",
+            "time": "2014-10-01T13:44:55.840Z"
+        },
+        "model": "db.event",
+        "pk": 12
+    },
+    {
+        "fields": {
+            "action": "modified",
+            "model": "Group #1",
+            "time": "2014-10-01T13:45:15.071Z"
+        },
+        "model": "db.event",
+        "pk": 13
+    },
+    {
+        "fields": {
+            "action": "modified",
+            "model": "Aubekir Yagopirovich",
+            "time": "2014-10-01T13:45:15.077Z"
+        },
+        "model": "db.event",
+        "pk": 14
+    }
+
+]

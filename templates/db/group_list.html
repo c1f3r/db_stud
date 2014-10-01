@@ -1,0 +1,27 @@
+{% extends "general.html" %}
+{% block extra_head %}
+    <title>Django CBV for testing template tag</title>
+{% endblock %}
+{% block content %}
+    {% load admin_url %}
+
+
+    <br>
+    <table class="table">
+        <tr>
+            <th>Group title</th>
+            <th>Quantity of students</th>
+            <th>Monitor</th>
+        </tr>
+        {% for group in object_list %}
+            <tr>
+                <td><a href="{% edit_link group %}">{{ group.title }}</a></td>
+                <td>{{ group.students.count }}</td>
+                <td>{{ group.monitor }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% if request.user.username %}
+        <a href="{% edit_link request.user %}">Edit {{ request.user.username }}</a>
+    {% endif %}
+{% endblock %}
