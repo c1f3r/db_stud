@@ -19,6 +19,14 @@ Install requirements:
 
 `pip install -r requirements.txt`
 
+Initialize database:
+
+`python manage.py makemigrations`
+`python manage.py migrate`
+`python manage.py createsuperuser`
+`python manage.py loaddata initial_data/initial_data.json`
+
+
 There is a command for displaying groups list:
 
 `python manage.py list_all`
