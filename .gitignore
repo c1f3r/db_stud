@@ -1,5 +1,6 @@
 db.sqlite3
 ex_uwsgi.ini
 uwsgi_params
+*.pyc
 db/migrations/*
 !__init__.py
