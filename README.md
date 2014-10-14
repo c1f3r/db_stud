@@ -1,6 +1,5 @@
 # db_stud
 This is student database written with django and angularjs.
-
 You can see demo [here](http://cifer-dbstud.herokuapp.com/)
 Login/password: admin/admin
 Also you can use email admin@example.com as login.
